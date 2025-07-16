@@ -1,0 +1,37 @@
+@layer reset, base;
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --mn-dark: #111;
+    --mn-light: #fff;
+    --mn-highlight: violet;
+  }
+  body {
+    color: light-dark(var(--mn-dark), var(--mn-light));
+    background-color: light-dark(var(--mn-light), var(--mn-dark));
+    font-size: 1.2rem;
+  }
+  a {
+    &:hover {
+      color: var(--mn-highlight);
+    }
+  }
+}
