@@ -1,16 +1,44 @@
 ---
+import { getCollection } from "astro:content";
 
+const configCollection = await getCollection("config");
+const { title, groups } = configCollection[0].data;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <h1>{title}</h1>
+      {
+        groups.map(({ name, links }) => (
+          <div>
+            <h2>{name}</h2>
+            <ul>
+              {links.map((link) => (
+                <li>
+                  <a href={link.href} target={link.target}>
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </main>
+    <footer>
+      Created with <a
+        href="https://github.com/Bikossor/modest-nexus"
+        target="_blank">Modest Nexus</a
+      > by <a href="https://lichten.me" target="_blank">Bikossor</a>
+    </footer>
+  </body>
 </html>
