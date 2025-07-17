@@ -28,6 +28,7 @@
     color: light-dark(var(--mn-dark), var(--mn-light));
     background-color: light-dark(var(--mn-light), var(--mn-dark));
     font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
   }
   a {
     &:hover {
