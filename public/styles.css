@@ -72,11 +72,13 @@
     }
   }
   .group-card {
+    display: grid;
+    gap: 2rem;
     background-color: light-dark(var(--mn-zinc-50), var(--mn-zinc-900));
     border-radius: var(--mn-border-radius);
     border: 1px solid
       light-dark(var(--mn-border-color-dark), var(--mn-border-color-light));
-    padding: 0 2rem;
+    padding: 2rem;
   }
   :focus {
     outline: 3px solid var(--mn-highlight);
