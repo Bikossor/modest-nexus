@@ -21,7 +21,7 @@ const { title, groups } = configCollection[0].data;
         <h1>{title}</h1>
         {
           groups.map(({ name, links }) => (
-            <div>
+            <div class="group-card">
               <h2>{name}</h2>
               <ul>
                 {links.map((link) => (
