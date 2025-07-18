@@ -40,6 +40,7 @@
     font-family: "Inter", sans-serif;
   }
   a {
+    border-radius: 1px;
     &:hover {
       color: var(--mn-highlight);
     }
