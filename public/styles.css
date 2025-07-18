@@ -73,4 +73,8 @@
       light-dark(var(--mn-border-color-dark), var(--mn-border-color-light));
     padding: 0 2rem;
   }
+  :focus {
+    outline: 3px solid var(--mn-highlight);
+    outline-offset: 5px;
+  }
 }
