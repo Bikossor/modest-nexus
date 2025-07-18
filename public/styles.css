@@ -71,5 +71,6 @@
     border-radius: var(--mn-border-radius);
     border: 1px solid
       light-dark(var(--mn-border-color-dark), var(--mn-border-color-light));
+    padding: 0 2rem;
   }
 }
