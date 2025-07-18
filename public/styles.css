@@ -84,4 +84,7 @@
     outline: 3px solid var(--mn-highlight);
     outline-offset: 5px;
   }
+  .my-2rem {
+    margin: 2rem 0;
+  }
 }
