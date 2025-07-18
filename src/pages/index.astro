@@ -18,23 +18,25 @@ const { title, groups } = configCollection[0].data;
   <body>
     <div class="container">
       <main class="flex-1">
-        <h1>{title}</h1>
-        {
-          groups.map(({ name, links }) => (
-            <div>
-              <h2>{name}</h2>
-              <ul>
-                {links.map((link) => (
-                  <li>
-                    <a href={link.href} target={link.target}>
-                      {link.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
+        <h1 class="my-2rem">{title}</h1>
+        <div class="group-grid">
+          {
+            groups.map(({ name, links }) => (
+              <div class="group-card">
+                <h2>{name}</h2>
+                <ul>
+                  {links.map((link) => (
+                    <li>
+                      <a href={link.href} target={link.target}>
+                        {link.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
       </main>
       <footer>
         Created with <a

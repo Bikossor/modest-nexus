@@ -19,27 +19,37 @@
   a {
     color: inherit;
   }
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+  }
 }
 
 @layer base {
   :root {
     color-scheme: light dark;
-    --mn-dark: #111;
+    --mn-zinc-950: oklch(14.1% 0.005 285.823);
+    --mn-zinc-900: oklch(21% 0.006 285.885);
+    --mn-zinc-50: oklch(98.5% 0 0);
     --mn-light: #fff;
     --mn-highlight: violet;
+    --mn-border-radius: 0.625rem;
+    --mn-border-color-light: rgba(255, 255, 255, 0.1);
+    --mn-border-color-dark: rgba(0, 0, 0, 0.1);
   }
   body {
-    color: light-dark(var(--mn-dark), var(--mn-light));
-    background-color: light-dark(var(--mn-light), var(--mn-dark));
-    font-size: 1.2rem;
+    color: light-dark(var(--mn-zinc-950), var(--mn-light));
+    background-color: light-dark(var(--mn-light), var(--mn-zinc-950));
+    font-size: 1rem;
     font-family: "Inter", sans-serif;
   }
   a {
+    border-radius: 1px;
     &:hover {
       color: var(--mn-highlight);
     }
   }
   footer {
+    font-size: 0.9rem;
     padding: 2rem 0;
   }
   .container {
@@ -50,5 +60,31 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .group-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media screen and (min-width: 64rem) {
+    .group-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .group-card {
+    display: grid;
+    gap: 2rem;
+    background-color: light-dark(var(--mn-zinc-50), var(--mn-zinc-900));
+    border-radius: var(--mn-border-radius);
+    border: 1px solid
+      light-dark(var(--mn-border-color-dark), var(--mn-border-color-light));
+    padding: 2rem;
+  }
+  :focus {
+    outline: 3px solid var(--mn-highlight);
+    outline-offset: 5px;
+  }
+  .my-2rem {
+    margin: 2rem 0;
   }
 }
