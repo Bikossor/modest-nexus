@@ -24,13 +24,13 @@
 @layer base {
   :root {
     color-scheme: light dark;
-    --mn-dark: #111;
+    --mn-zinc-950: oklch(14.1% 0.005 285.823);
     --mn-light: #fff;
     --mn-highlight: violet;
   }
   body {
-    color: light-dark(var(--mn-dark), var(--mn-light));
-    background-color: light-dark(var(--mn-light), var(--mn-dark));
+    color: light-dark(var(--mn-zinc-950), var(--mn-light));
+    background-color: light-dark(var(--mn-light), var(--mn-zinc-950));
     font-size: 1.2rem;
     font-family: "Inter", sans-serif;
   }
