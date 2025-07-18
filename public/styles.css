@@ -36,7 +36,7 @@
   body {
     color: light-dark(var(--mn-zinc-950), var(--mn-light));
     background-color: light-dark(var(--mn-light), var(--mn-zinc-950));
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: "Inter", sans-serif;
   }
   a {
