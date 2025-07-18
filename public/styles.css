@@ -54,6 +54,16 @@
   .flex-1 {
     flex: 1;
   }
+  .group-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media screen and (min-width: 64rem) {
+    .group-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   .group-card {
     background-color: var(--mn-zinc-900);
     border-radius: var(--mn-border-radius);
