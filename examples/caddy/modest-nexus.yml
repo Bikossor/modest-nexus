@@ -1,0 +1,9 @@
+title: "Modest Nexus Example"
+version: 1
+groups:
+  - name: "This is a group"
+    links:
+      - title: "Bluesky"
+        href: "https://bsky.app"
+      - title: "GitHub"
+        href: "https://github.com"
