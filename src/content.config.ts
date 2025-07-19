@@ -2,7 +2,7 @@ import { z, defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 
 const config = defineCollection({
-  loader: glob({ pattern: "**/*.yml" }),
+  loader: glob({ pattern: "**/*.{yml,yaml}" }),
   schema: z.object({
     title: z.string(),
     version: z
