@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/Bikossor/modest-nexus/main/modest-nexus.schema.json",
+  "title": "Modest Nexus configuration",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "title": { "type": "string" },
+    "version": { "type": "number" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "href": { "type": "string", "format": "uri" },
+                "target": {
+                  "default": "_self",
+                  "type": "string",
+                  "enum": ["_blank", "_parent", "_self", "_top"]
+                }
+              },
+              "required": ["title", "href"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["name", "links"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["title", "version", "groups"],
+  "additionalProperties": false
+}
