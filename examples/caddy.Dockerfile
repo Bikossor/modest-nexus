@@ -1,4 +1,4 @@
-FROM ghcr.io/bikossor/modest-nexus:1.0.0 AS base
+FROM ghcr.io/bikossor/modest-nexus:1.1.0 AS base
 
 WORKDIR /app
 
