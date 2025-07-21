@@ -1,5 +1,0 @@
-:80
-
-encode zstd gzip
-root * /usr/share/caddy
-file_server

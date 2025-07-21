@@ -1,4 +1,4 @@
-FROM ghcr.io/bikossor/modest-nexus:1.0.0 AS base
+FROM ghcr.io/bikossor/modest-nexus:1.1.0 AS base
 
 WORKDIR /app
 
@@ -13,5 +13,3 @@ RUN npm run build
 FROM caddy:2.10.0-alpine
 
 COPY --from=builder /app/dist /usr/share/caddy
-
-COPY Caddyfile /etc/caddy/Caddyfile
