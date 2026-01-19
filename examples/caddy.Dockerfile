@@ -10,6 +10,6 @@ FROM base AS builder
 
 RUN npm run build
 
-FROM caddy:2.10.0-alpine
+FROM caddy:2.10.2
 
 COPY --from=builder /app/dist /usr/share/caddy

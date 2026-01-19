@@ -10,6 +10,6 @@ FROM base AS builder
 
 RUN npm run build
 
-FROM nginx:1.29.0-alpine
+FROM nginx:1.29.4-alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
