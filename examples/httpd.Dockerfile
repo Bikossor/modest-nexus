@@ -10,6 +10,6 @@ FROM base AS builder
 
 RUN npm run build
 
-FROM httpd:2.4.64-alpine
+FROM httpd:2.4.66
 
 COPY --from=builder /app/dist /usr/local/apache2/htdocs
