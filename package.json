@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@fontsource/inter": "5.2.8",
-    "astro": "5.15.3"
+    "astro": "5.16.11"
   }
 }
